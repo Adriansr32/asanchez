@@ -3,7 +3,10 @@
 dins el parèntesis
 en aquest cas es posaran en color cyan */
 a {
-  color: cyan;
+  color: rgb(255, 255, 255);
+}
+a:hover {
+  color: rgb(0, 38, 255);
 }
 /* com referenciar a un identificador */
 #tit {
@@ -25,33 +28,67 @@ article.Script {
   box-shadow: 20px 20px 20px rgb(109, 58, 58);
 }
 #menu-principal {
-  background-color: rgb(194, 192, 255);
+  background-color: tomato;
   color: blue;
-  border: 2px solid rgb(37, 169, 240);
-  margin: 20px;
-  padding: 20px;
+  border: 4px solid black;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  height: 30%;
+
 }
 /* possem els menús en horitzontal, i sí, podem possar a la vegada més
     d'una referència */
-ul,
+    
 li {
-  padding: 0, 0;
-  margin: 2px, 2px;
-  /* atenció la característica display que és molt potent */
-  display: inline-block;
-}
+      display: inline-block;
+    }
 footer {
-  background-color: rgb(7, 218, 218);
-  padding: 10px, 10px;
-  margin: 0;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ea2803+0,ea2803+35,ea2803+57,ea2803+60,000000+97,000000+100,c72200+100 */
-background: linear-gradient(to bottom,  rgba(234,40,3,1) 0%,rgba(234,40,3,1) 35%,rgba(234,40,3,1) 57%,rgba(234,40,3,1) 60%,rgba(0,0,0,1) 97%,rgba(0,0,0,1) 100%,rgba(199,34,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
+  border: 4px solid black;
+  margin: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
-.Video {
+
+form {
   width: 50%;
-  border-radius: 10px;
   margin: 10px;
-  box-shadow: 10px 10px 10px;
+  margin-top: 20px;
+  border: 4px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+label {
+  margin: 10px;
+}
+input, textarea, button {
+  width: 20%;
+  padding: 5px;
+  margin: 10px;
+}
+select {
+  border-radius: 5px;
+}
+#nom {
+  margin-left: 20px;
+}
+#cognom {
+  margin-left: -3px;
+}
+#assumpte {
+ margin-left: -11px; 
+}
+button{
+  border-radius: 5px;
+  width: 10%;
+}
+label.missatge {
+margin-left: 300px;
+}
+textarea.missatge {
+margin-left: 300px;
+top: 100px;
 }
