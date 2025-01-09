@@ -1,0 +1,57 @@
+/* això és un comentari en css */
+/* a tots els elements de tipus link (a) se'ls aplicarà el que hi ha
+dins el parèntesis
+en aquest cas es posaran en color cyan */
+a {
+  color: cyan;
+}
+/* com referenciar a un identificador */
+#tit {
+  color: rgb(255, 0, 102);
+}
+/* podem fer que els elements li tinguin un determinat color, marge
+exterior i interior (margin i padding)*/
+article.Script {
+  background-color: tomato;
+  color: white;
+  border: 4px solid black;
+  margin: 5px;
+  padding: 10px;
+  display: inline-block;
+  width: 30%;
+  height: 200px;
+  opacity: 10;
+  border-radius: 20px;
+  box-shadow: 20px 20px 20px rgb(109, 58, 58);
+}
+#menu-principal {
+  background-color: rgb(194, 192, 255);
+  color: blue;
+  border: 2px solid rgb(37, 169, 240);
+  margin: 20px;
+  padding: 20px;
+}
+/* possem els menús en horitzontal, i sí, podem possar a la vegada més
+    d'una referència */
+ul,
+li {
+  padding: 0, 0;
+  margin: 2px, 2px;
+  /* atenció la característica display que és molt potent */
+  display: inline-block;
+}
+footer {
+  background-color: rgb(7, 218, 218);
+  padding: 10px, 10px;
+  margin: 0;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ea2803+0,ea2803+35,ea2803+57,ea2803+60,000000+97,000000+100,c72200+100 */
+background: linear-gradient(to bottom,  rgba(234,40,3,1) 0%,rgba(234,40,3,1) 35%,rgba(234,40,3,1) 57%,rgba(234,40,3,1) 60%,rgba(0,0,0,1) 97%,rgba(0,0,0,1) 100%,rgba(199,34,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+
+.Video {
+  width: 50%;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 10px 10px 10px;
+}
