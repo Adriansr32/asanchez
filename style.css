@@ -15,6 +15,7 @@ a:hover {
 /* podem fer que els elements li tinguin un determinat color, marge
 exterior i interior (margin i padding)*/
 article.Script {
+  
   background-color: tomato;
   color: white;
   border: 4px solid black;
@@ -36,6 +37,7 @@ article.Script {
   padding: 10px;
   width: 30%;
   height: 30%;
+  box-shadow: 20px 20px 20px rgb(109, 58, 58);
 
 }
 /* possem els menús en horitzontal, i sí, podem possar a la vegada més
@@ -46,30 +48,45 @@ li {
     }
 footer {
   border: 4px solid black;
-  margin: 5px;
+  margin: 10px;
   padding: 10px;
   margin-top: 20px;
   border-radius: 10px;
+  background-color: tomato;
+  box-shadow: 20px 20px 20px rgb(109, 58, 58);
 }
 
 
 form {
-  width: 50%;
-  margin: 10px;
+  width: 30%;
+  margin-left: 500px;
   margin-top: 20px;
   border: 4px solid;
   border-radius: 10px;
   padding: 10px;
+  background-color: tomato;
+  box-shadow: 20px 20px 20px rgb(109, 58, 58);
+  
 }
 label {
   margin: 10px;
+  color: white;
 }
 input, textarea, button {
-  width: 20%;
+  width: 50%;
   padding: 5px;
   margin: 10px;
 }
 select {
+  border-radius: 5px;
+  border: 2px solid;
+}
+input {
+  border: 2px solid;
+  border-radius: 5px;
+}
+textarea {
+  border: 2px solid;
   border-radius: 5px;
 }
 #nom {
@@ -83,12 +100,20 @@ select {
 }
 button{
   border-radius: 5px;
+  width: 20%;
+}
+img.imgSc {
+  height: 70%;
+  margin-top: -10%;
+  margin-left: 50%;
+  border-radius: 10%;
+}
+
+.amp {
+  margin-top: -20%;
+}
+img.imgag {
   width: 10%;
-}
-label.missatge {
-margin-left: 300px;
-}
-textarea.missatge {
-margin-left: 300px;
-top: 100px;
+  margin-top: 2px;
+  margin-left: -10px;
 }
