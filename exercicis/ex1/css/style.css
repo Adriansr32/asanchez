@@ -43,6 +43,10 @@ article.Script {
   border-radius: 20px;
   box-shadow: 5px 5px 5px rgb(11, 11, 11);
 }
+article.Script:hover {
+  background-color: #2e2f2f;
+  border: 10px solid #424343;
+}
 #menu-principal {
   position: fixed;
   background-color: #111212;
@@ -58,6 +62,9 @@ article.Script {
 
 }
 
+index a {
+    border: 25px #939898;
+}
 /* possem els menús en horitzontal, i sí, podem possar a la vegada més
     d'una referència */
     
