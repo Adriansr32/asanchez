@@ -3,7 +3,7 @@
 dins el parèntesis
 en aquest cas es posaran en color cyan */
 body {
-  background-image: url('matrix.gif'); /* Ruta al GIF */
+  background-image: url('../images/matrix.gif'); /* Ruta al GIF */
   background-size: cover; /* Ajusta el tamaño del GIF para cubrir todo el fondo */
   background-position: center; /* Centra el GIF en la página */
   background-color: black;
