@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+    background-color: black;
+}
+
+.cap2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.cap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1519px;
+    height: 400px;
+    object-fit: cover;
+    z-index: 1; /* Imagen al fondo */
+}
+
+.contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -400%);
+    color: white;
+    font-size: 2rem;
+    z-index: 1; /* Texto encima de la imagen */
+}
+
+/* Establecemos el contenedor del grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    grid-template-rows: repeat(4, 1fr); /* 4 filas de igual tamaño */
+   margin-left: 30px;
+    gap: 10px; /* Espacio entre las celdas */
+    width: 95%;
+    border: 5px solid #333; /* Borde alrededor del grid completo */
+    padding: 10px; /* Espacio interno entre el borde y las celdas */
+}
+
+/* Estilo para las imágenes dentro del grid */
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #333; /* Agrega un borde alrededor de cada celda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de las celdas */
+}
+
+/* Imágenes dentro del grid */
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra la celda */
+}
+
+/* Imagen grande, que ocupa dos celdas (filas y columnas) */
+.large-item {
+    grid-column: span 2; /* Ocupa dos columnas */
+    grid-row: span 2; /* Ocupa dos filas */
+}
+
