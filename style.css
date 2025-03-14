@@ -450,6 +450,28 @@ h1 {
   -webkit-overflow-scrolling: touch;
 }
 
+.projectes .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 0;
+}
+
+.projectes .section-title {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: Sigmar;
+}
+
+.projectes .section-description {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 800px;
+}
+
 .projectes-container .row {
   display: flex;
   flex-wrap: nowrap;
@@ -486,21 +508,21 @@ h1 {
 
 
 .overlay {
+  transition: all 0.3s ease;
   opacity: 0;
-  background: linear-gradient(to top, rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.7));
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
-  top: 0;
   bottom: 0;
-  padding: 25px;
-  color: #e0e0e0;
+  background: rgba(40, 40, 40, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(4px);
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
 }
 
 .overlay p {
