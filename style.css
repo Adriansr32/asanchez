@@ -1,383 +1,708 @@
 .sigmar-regular {
-    font-family: "Sigmar", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Sigmar", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*barra de navegació*/
 .navbar {
-    padding: 5px;
+  padding: 1rem;
+  background: rgba(29, 29, 29, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /*distribució del menu*/
 .navbar-collapse {
-    align-items: center;
-    justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*distribució del menu en dispositius mòbils*/
 @media screen and (max-width: 768px) {
-    .navbar-brand {
-        display: none;
-    }
+  .navbar-brand {
+    display: none;
+  }
+
+  .hero {
+    padding: 1rem;
+    min-height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero h2 {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+
+  .hero-imatge-developer {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+  }
+
+  .hero-inferior img {
+    width: 50%;
+    max-width: 200px;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    margin-bottom: 1rem;
+  }
+
+  .section-text {
+    font-size: clamp(2rem, 4vw, 2rem);
+    padding: 0 1rem;
+  }
+
+  .projecte {
+    margin: 8px;
+    padding: 10px;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    margin: 8px;
+  }
+
+  .social-icons i {
+    font-size: 1.2rem;
+  }
+
+  .columna {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .badges-contenedor {
+    gap: 6px;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.8em;
+  }
+
+  .overlay p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
 }
 
 /*seccio principal*/
 .hero {
-    background: linear-gradient(135deg, #f5f6f7 0%, #e9ecef 100%);
-    min-height: 100vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+  background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 50%, #1e1e1e 100%);
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(104, 160, 99, 0.6);
 }
 
 /*Estils generals*/
 section {
-    display: flex;
-    flex-direction: column;
-    /*alineat en columnes del contingut*/
-    justify-content: center;
-    /*centrat verticalment*/
-    align-items: center;
-    /*centrat horitzontalment*/
+  display: flex;
+  flex-direction: column;
+  /*alineat en columnes del contingut*/
+  justify-content: center;
+  /*centrat verticalment*/
+  align-items: center;
+  /*centrat horitzontalment*/
 }
 
 a {
-    font-family: Sigmar;
+  font-family: Sigmar;
 }
 
 h1 {
-    font-family: Sigmar;
-    font-size: 4.5vw;
-    /*mida de la font relativa a la pantalla*/
+  font-family: Sigmar;
+  font-size: 4.5vw;
+  /*mida de la font relativa a la pantalla*/
 }
 
 .hero-imatge-developer {
-    width: 220px;
-    height: 220px;
-    margin: 20px;
-    border: 4px solid #1b1b32;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+  width: 220px;
+  height: 220px;
+  margin: 20px;
+  border: 4px solid #68a063;
+  box-shadow: 0 0 30px rgba(104, 160, 99, 0.3), 0 0 60px rgba(55, 95, 52, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: grayscale(50%);
 }
 
 .hero-imatge-developer:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(104, 160, 99, 0.5), 0 0 80px rgba(55, 95, 52, 0.3);
 }
 
 .hero h2 {
-    font-family: Sigmar;
-    font-size: 2.3vw;
-    /*mida de la font relativa a la pantalla*/
-    color: #615151;
-    /*color del text*/
+  font-family: Sigmar;
+  font-size: 2.3vw;
+  /*mida de la font relativa a la pantalla*/
+  color: #50c649c7;
+  /*color del text*/
 }
 
 .hero-inferior img {
-    width: 20%;
+  width: 20%;
 }
 
 .dark-section {
-    color: white;
-    background: linear-gradient(160deg, #1b1b32 0%, #0a0a23 100%);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #e0e0e0;
+  background: linear-gradient(160deg, #1a1a1a 0%, #2d2d2d 100%);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  margin: 30px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
 }
 
 
 .about-me {
-    height: 500px;
-    padding: 10px;
+  padding: clamp(20px, 5vw, 40px);
+  min-height: fit-content;
+  width: 100%;
+  overflow: hidden;
 }
-
 
 .about-me div {
-    max-width: 600px;
-    text-align: center;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: clamp(10px, 3vw, 20px);
 }
 
-/*Estils generals*/
-.section-title {
-    font-size: 2.5vw;
-    /*mida de la font relativa a la pantalla*/
-    font-family: Sigmar;
-    /*font de la capçalera*/
-    padding: 5px 0;
-    /*espaiat entre la capçalera i el contingut*/
-}
 
 .section-text {
-    font-size: 2vw;
-    /*mida de la font relativa a la pantalla*/
-    padding: 15px 0;
-    /*espaiat entre el text i el contingut*/
+  font-size: 2.5vw;
+  /*mida de la font relativa a la pantalla*/
+  padding: 10px;
+  /*espaiat entre el text i el contingut*/
 }
 
 /* media queries per a dispositius mòbils */
 @media screen and (max-width: 768px) {
 
-    /*distribució del menu en dispositius mòbils*/
-    .navbar-brand {
-        display: none;
-    }
+  /*distribució del menu en dispositius mòbils*/
+  .navbar-brand {
+    display: none;
+  }
 
-    /*Secció sobre mi*/
-    .about-me {
-        height: 200px;
-    }}
+  /*Secció sobre mi*/
+  .about-me {
+    height: 200px;
+  }
+}
 
-    /* media queries per a dispositius mòbils */
+/* media queries per a dispositius mòbils */
 @media screen and (max-width: 768px) {
-    /*distribució del menu en dispositius mòbils*/
-   .navbar-brand {
-     display: none;
-   }  
-  
-   /*Secció sobre mi*/
-   .about-me{
-     height: 200px;
-   }
- 
- 
-   /*tamany del botó */
-   .btn-responive {
-      font-size: 11px; padding: 6px 12px;
-   }
- }
- .white-section{
-    color:black;  
-    background-color: white; /*color de fons de la secció clara*/
+
+  /*distribució del menu en dispositius mòbils*/
+  .navbar-brand {
+    display: none;
   }
 
-  .experiencia-title{
-    font-size:clamp(14px,2.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-    font-weight: bold;
-    margin: 10px 0;
+  /*Secció sobre mi*/
+  .about-me {
+    padding: 15px;
+    min-height: fit-content;
   }
-  
 
-  .experience i{
-    font-size:clamp(14px,2vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-    color: #7ade30;
-    background-color:#0a0a23 ;
-    padding:8px 19px;
-    border-radius: 50%;
 
+  /*tamany del botó */
+  .btn-responive {
+    font-size: 11px;
+    padding: 6px 12px;
   }
-  
-  
-  .experience { 
+}
+
+.white-section {
+  color: black;
+  background-color: white;
+  /*color de fons de la secció clara*/
+}
+
+.experiencia-title {
+  font-size: clamp(14px, 2.5vw, 50px);
+  /*defineix el tamany mínim, màxim i òptim de la font*/
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+
+.experience i {
+  font-size: clamp(14px, 2vw, 50px);
+  /*defineix el tamany mínim, màxim i òptim de la font*/
+  color: #68a063;
+  background-color: #2c3437;
+  padding: 8px 19px;
+  border-radius: 50%;
+
+}
+
+
+.experience {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .experience {
     padding: 40px 40px 60px 40px;
   }
-  .columna{
-    margin-bottom: 10px;
-  }
-  
-  
-  .badges-contenedor{
-    font-size:clamp(12px,1.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  
-  .badge {
-    margin: 5px,
-  }
+}
 
-  .experience .columna{
-    margin-bottom: 10px;
+.columna {
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+@media (min-width: 768px) {
+  .columna {
     padding: 20px;
-    border: 2px solid #8080804d;
   }
+}
 
-  .experience .columna:hover{
-    color:white;
-    background-color: #1b1b32;
-    border: 2px solid #7ade30;
-  }
-  .experience .columna{
-    margin-bottom: 10px;
-    padding: 20px;
-    border: 2px solid #8080804d;
-    transition: all 0.3s ease-in;
-  }
 
-  /*Estils generals*/
-.section-title{
-    font-size:clamp(14px,2.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-    font-family: Sigmar; /*font de la capçalera*/
-    padding: 5px 0; /*espaiat entre la capçalera i el contingut*/    
-  }
-  .black-text{
-    color: black;
-  }
-  
-  
-  /*projectes*/
-  .section-description{
-    font-size:clamp(14px,2vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-    color: #584343;
-  }
+.badges-contenedor {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
 
-  /*projectes-------------------------------------------------------*/
+.badge {
+  background-color: rgba(104, 160, 99, 0.1) !important;
+  color: #68a063 !important;
+  border: 1px solid rgba(104, 160, 99, 0.2);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(104, 160, 99, 0.15);
+}
+
+
+/* Progress Bar Styles */
+.skills-container {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-item:last-child {
+  margin-bottom: 0;
+}
+
+.progress {
+  height: 25px;
+  background-color: rgba(2, 2, 2, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 1s ease-in-out;
+  background: linear-gradient(90deg, #68a063 0%, #28a745 100%);
+  box-shadow: 0 0 15px rgba(104, 160, 99, 0.4);
+  border-radius: 15px;
+}
+
+.progress-bar[aria-valuenow="90"] {
+  margin-left: 5px;
+  width: 90%;
+  animation: progressAnimation 1s ease-in-out;
+}
+
+.progress-bar[aria-valuenow="85"] {
+  margin-left: 5px;
+  width: 85%;
+  animation: progressAnimation 1s ease-in-out;
+}
+
+.progress-bar[aria-valuenow="80"] {
+  margin-left: 5px;
+  width: 80%;
+  animation: progressAnimation 1s ease-in-out;
+}
+
+
+
+.skill-item span {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+
+.experience .columna {
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 2px solid #8080804d;
+}
+
+.experience .columna:hover {
+  background-color: #f6f6f6;
+  border: 1px solid #68a063;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.experience .columna {
+  margin-bottom: 20px;
+  padding: 24px;
+  border: 1px solid rgba(104, 160, 99, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease-in;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/*Estils generals*/
+.section-title {
+  font-size: clamp(14px, 2.5vw, 50px);
+  /*defineix el tamany mínim, màxim i òptim de la font*/
+  font-family: Sigmar;
+  /*font de la capçalera*/
+  padding: 5px 0;
+  /*espaiat entre la capçalera i el contingut*/
+}
+
+.black-text {
+  color: black;
+}
+
+
+/*projectes*/
+.section-description {
+  font-size: clamp(14px, 2vw, 50px);
+  /*defineix el tamany mínim, màxim i òptim de la font*/
+  color: #333333;
+  line-height: 1.6;
+}
+
+/*projectes-------------------------------------------------------*/
 .projectes {
-    padding: 40px;
-  }
-  
-  
-  .projectes img{
-    height: 100%;
-    width: 100%;
-    margin: 10px;
-    box-shadow: 0px 11px 50px rgba(43, 43, 43, 0.5);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  
-  .projectes-container{
-    padding-top: 60px;
-    margin-bottom: 40px;
-  }
-  
-  
-  .overlay{
-    transition: all 0.3s ease;
-    opacity: 0;  /*transparència de la capa NO ES VEU*/
-    position: absolute;
-    top:50%;  /*al centre vertical */
-    left: 50%;   /* al centre horitzontal */
-    transform: translate(-50%, -50%);  
-    text-align: center;
-   }
-  
-  
-   .overlay p{
-    font-size:clamp(14px,2.5vw,30px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-    margin-bottom: 0;
-   }
-  
-  
-  .projecte {
-    position: relative;
-  }
-  
-  
-  .projecte:hover img {
-    transform: scale(1.05);
-    opacity: 0.2;
-    
-  }
-  
-  
-  .projecte:hover .overlay {
-    opacity: 1;
-  }
-  
-  
-  .overlay .icones-contenidor {
-    display: flex;
-    flex-direction: column; /*alineat en columnes del contingut*/
-    justify-content:center; /*centrat verticalment*/
-    align-items: center; /*centrat horitzontalment*/  
-  }
-  
-  
-  .overlay i {
-    color: black;
-    font-size: 60px;
-    margin: 10px;
+  padding: 40px;
+}
+
+
+.projectes img {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(104, 160, 99, 0.2);
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .projectes {
+    padding: 20px;
   }
 
-  .video{
-    position: relative;
-    width: 100%; /* Ajusta el div a l'ample que necessitis */
-    padding-top: 56.25%; /* Això manté una relació 16:9 (9 / 16 * 100) */
+  .projectes img {
+    max-height: 250px;
   }
-  
-  
-  .video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
+  .overlay p {
+    font-size: 1rem;
   }
-  
-  .projecte h2{
-    font-size:clamp(19px,2.5vw,30px); 
-    margin: 10px 0;
-  }
-  
-  
-  .projecte p{
-    font-size:clamp(14px,2vw,25px);  
-    margin: 10px 0 30px 0px;
-  }
-  /*footer-------------------------------------------------------*/
-  footer {
-    min-height: 500px;
-  }
-  
-  
-  .footer-logo {
-    height: 80px;
-    width: 80px;
-    margin: 10px;
-  }
-  
-  
-  .footer-text {
-    padding: 20px;
-    margin-bottom: 30px;
-    font-size:clamp(14px,2.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-    font-family:"Vast Shadow"; /*font de la capçalera*/
-  }
-  
-  
-  .social-icons a {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-    margin: 10px;
-    border: 2px solid white;
-    border-radius: 50%;
-    transition: all 0.2s ease-in;
-  }
-  
-  
-  .social-icons i {
-    color: white;
-    font-size: 1.5rem;
-    transition: all 0.2s ease-in;
-  }
-  
-  
-  .social-icons a:hover {
-    background-color: white;
-    border: 2px solid rgb(13, 110, 253);
-  }
-  
-  
-  .social-icons a:hover i {
-    color: black;
-  }
-  
-  
-  .drets {
-    font-size: 15px;
-    color: #aeaeae;
-    padding: 20px;
-  }
-  
-    
-  
-  
-    
+}
+
+
+.projectes-container {
+  padding-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.projectes-container .row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 20px 0;
+  margin: 0;
+  width: fit-content;
+}
+
+.projectes-container .projecte {
+  flex: 0 0 auto;
+  width: 400px;
+  scroll-snap-align: start;
+  margin: 0;
+}
+
+.projectes-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projectes-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.projectes-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.projectes-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.overlay {
+  opacity: 0;
+  background: linear-gradient(to top, rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.7));
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 25px;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(4px);
+}
+
+.overlay p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.projecte:hover .overlay p {
+  transform: translateY(0);
+}
+
+
+.overlay p {
+  font-size: clamp(14px, 2.5vw, 30px);
+  /*defineix el tamany mínim, màxim i òptim de la font*/
+  margin-bottom: 0;
+}
+
+
+.projecte {
+  padding: 20px;
+  position: relative;
+  max-width: 800px;
+  margin: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projecte:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.projecte img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.projecte:hover img {
+  transform: scale(1.05);
+}
+
+
+.projecte:hover img {
+  transform: scale(1.05);
+  opacity: 0.15;
+  filter: blur(2px);
+}
+
+
+.projecte:hover .overlay {
+  opacity: 1;
+}
+
+
+.overlay .icones-contenidor {
+  display: flex;
+  flex-direction: column;
+  /*alineat en columnes del contingut*/
+  justify-content: center;
+  /*centrat verticalment*/
+  align-items: center;
+  /*centrat horitzontalment*/
+}
+
+
+.overlay i {
+  color: black;
+  font-size: 60px;
+  margin: 10px;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  /* Ajusta el div a l'ample que necessitis */
+  padding-top: 56.25%;
+  /* Això manté una relació 16:9 (9 / 16 * 100) */
+}
+
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.projecte h2 {
+  font-size: clamp(19px, 2.5vw, 30px);
+  margin: 10px 0;
+}
+
+
+.projecte p {
+  font-size: clamp(14px, 2vw, 25px);
+  margin: 10px 0 30px 0px;
+}
+
+/*footer-------------------------------------------------------*/
+footer {
+  min-height: 500px;
+}
+
+
+.footer-logo {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+}
+
+
+.footer-text {
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: clamp(14px, 2.5vw, 50px);
+  /*defineix el tamany mínim, màxim i òptim de la font*/
+  font-family: "Vast Shadow";
+  /*font de la capçalera*/
+}
+
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 2px solid #68a063;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 20px rgba(104, 160, 99, 0.2);
+}
+
+.social-icons a:hover {
+  background-color: #68a063;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 30px rgba(104, 160, 99, 0.3);
+}
+
+.social-icons i {
+  color: #e0e0ff;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+
+.social-icons a:hover {
+  background-color: #68a063;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 30px rgba(104, 160, 99, 0.3);
+}
+
+.social-icons i {
+  color: #e0e0ff;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+
+.social-icons a:hover {
+  background-color: #68a063;
+  border: 2px solid #ffffff;
+  transform: translateY(-2px);
+}
+
+
+.social-icons a:hover i {
+  color: black;
+}
+
+
+.drets {
+  font-size: 15px;
+  color: #aeaeae;
+  padding: 20px;
+}
+
+.btn-success {
+  transition: width 1s ease-in-out;
+  background: linear-gradient(90deg, #68a063 0%, #28a745 100%);
+  box-shadow: 0 0 15px rgba(104, 160, 99, 0.4);
+  border-radius: 15px;
+  color: #fff;
+}
+.btn-success:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(104, 160, 99, 0.15);
+
+}
+.btn-outline-light {
+  border-radius: 15px;
+}
+.btn-outline-light:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(104, 160, 99, 0.15);
+}

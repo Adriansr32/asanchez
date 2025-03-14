@@ -34,11 +34,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <a class="navbar-brand" href="#">
-          <img src="images/favicon.png" alt="icona" width="50" />
+          <img src="images/favicon.png" alt="icona" width="50" class="d-inline-block align-text-top" />
         </a>
-        <ul class="navbar-nav d-flex justify-content-center align-items-center">
+        <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#sobremi">About me</a>
+            <a class="nav-link" href="#sobremi">About me</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#webdesign">Web design</a>
@@ -55,32 +55,78 @@
   </nav>
 
   <section class="hero align-items-stretch">
-    <div>
-      <img class="hero-imatge-developer rounded-circle" src="images/Laroca.png" alt="foto personal" />
-      <h1>Hi, I'm Homer Simpson</h1>
-      <h2>Software Developer and Teacher of DAM</h2>
+    <div class="hero-content">
+      <div class="hero-profile">
+        <img class="hero-imatge-developer rounded-circle" src="images/Laroca.png" alt="foto personal" />
+        <h1 class="display-4 fw-bold">Hi, I'm Adrián Sánchez</h1>
+        <h2 class="lead mb-4">Software Developer and Student of DAM</h2>
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+          <a href="#sobremi" class="btn btn-outline-light btn-lg px-4 me-sm-3">Learn More</a>
+          <a href="#contacte" class="btn btn-success btn-lg px-4">Get in Touch</a>
+        </div>
+      </div>
     </div>
     <div class="hero-inferior">
       <img class="img-fluid" src="images/pqpq.png" alt="imatge ordinador i llenguatges" />
     </div>
   </section>
 
-  <!--section sobre mi-->
-  <section id="sobremi" class="about-me dark-section">
-    <div>
-      <h2 class="section-title">Learn more about me</h2>
-      <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dicta vitae animi.
-        Reiciendis, officia? Cum, voluptatem, aliquid eius expedita ad sunt architecto numquam aperiam maxime, veniam
-        perferendis nihil nobis inventore?</p>
-      <!--botó descarregar cv-->
-      <div class="text-center">
-        <a href="document.pdf" download class="btn btn-primary btn-lg btn-responive">
-          📄 Download CV
-        </a>
+<!--section sobre mi-->
+<section id="sobremi" class="about-me dark-section">
+  <div class="container-fluid py-5">
+    <div class="row">
+      <!-- Left column for text -->
+      <div class="col-12">
+        <h2 class="section-title mb-4">Learn more about me</h2>
+        <p class="section-text lead text-start">As a current DAM (Multiplatform Application Development) student, I'm passionate about programming and software development.</p>
       </div>
-
+      
+      <div class="row align-items-center">
+        <!-- Skills column -->
+        <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+          <div class="skills-container">
+            <div class="skill-item mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Web Development</span>
+                <span>90%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="skill-item mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Java Development</span>
+                <span>85%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="skill-item mb-3">
+              <div class="d-flex justify-content-between">
+                <span>System Administration</span>
+                <span>80%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Download CV button column -->
+        <div class="col-12 col-lg-4">
+          <div class="skills-container">
+            <a href="document.pdf" download class="btn btn-success btn-lg px-4 py-3 w-100">
+              <i class="bi bi-file-earmark-text me-2"></i>Download CV
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!--seccio experiència-->
   <section class="experience light-section">
@@ -149,9 +195,10 @@
           <div class="overlay">
             <p>Botiga de script</p>
             <div class="icones-contenidor">
-              <a href="https://asanchez.netlify.app/exercicis/ex1/html/botiga" target="_blank" rel="noopener noreferrer">
+              <a href="/exercicis/ex1/html/Botiga.html" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-laptop"></i>
               </a>
+              <p>An e-commerce platform for digital scripts and tools, featuring a modern UI and seamless user experience</p>
             </div>
           </div>
         </div>
@@ -161,9 +208,10 @@
           <div class="overlay">
             <p>Disobey</p>
             <div class="icones-contenidor">
-              <a href="https://asanchez.netlify.app/exercicis/ex2/html/music" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-"></i>
+              <a href="/exercicis/ex2/html/music" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-music-note"></i>
               </a>
+              <p>A music streaming platform with dynamic content and responsive design</p>
             </div>
           </div>
         </div>
@@ -173,9 +221,10 @@
          <div class="overlay">
            <p>Pintors</p>
            <div class="icones-contenidor">
-             <a href="https://asanchez.netlify.app/exercicis/ex3/html/pintures" target="_blank" rel="noopener noreferrer">
-               <i class="bi bi-laptop"></i>
+             <a href="/exercicis/ex3/html/pintures" target="_blank" rel="noopener noreferrer">
+               <i class="bi bi-palette"></i>
              </a>
+             <p>An art gallery showcase featuring interactive elements and elegant design</p>
            </div>
         </div>
      </div>
@@ -245,20 +294,17 @@
   </section> 
     <!--section contacte-->
     <footer  id="contacte" class="dark-section d-flex flex-column align-items-center justify-content-center">
-      <img class="footer-logo" src="images/icona.png" alt="logo"/>
+      <img class="footer-logo" src="images/favicon.png" alt="logo"/>
       <p class="footer-text text-center">Contact me</p>
       <div class= "social-icons d-flex flex-wrap align-items-center justify-content-center">
         <a href="mailto:homer@hotmail.com" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-envelope"></i>
         </a>
-        <a href="https://www.linkedin.com/in/homer-simpson" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/adriansr22" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-linkedin"></i>
         </a>
-        <a href="https://www.github.com/homer-simpson" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Adriansr32" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-github"></i>
-        </a>
-        <a href="https://www.twitter.com/homer-simpson" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-twitter"></i>
         </a>
       </div>
       <div class="drets">Created by Adrián Sánchez (2025) &#169;</div>
