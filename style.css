@@ -8,8 +8,6 @@
 .navbar {
   padding: 1rem;
   background: rgba(29, 29, 29, 0.95) !important;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /*distribució del menu*/
@@ -18,80 +16,7 @@
   justify-content: space-between;
 }
 
-/*distribució del menu en dispositius mòbils*/
-@media screen and (max-width: 768px) {
-  .navbar-brand {
-    display: none;
-  }
 
-  .hero {
-    padding: 1rem;
-    min-height: 80vh;
-  }
-
-  .hero h1 {
-    font-size: clamp(1.5rem, 5vw, 2rem);
-    margin-bottom: 0.5rem;
-  }
-
-  .hero h2 {
-    font-size: clamp(1rem, 3vw, 1.2rem);
-  }
-
-  .hero-imatge-developer {
-    width: 150px;
-    height: 150px;
-    margin: 15px;
-  }
-
-  .hero-inferior img {
-    width: 50%;
-    max-width: 200px;
-  }
-
-  .section-title {
-    font-size: clamp(1.5rem, 4vw, 1.8rem);
-    margin-bottom: 1rem;
-  }
-
-  .section-text {
-    font-size: clamp(2rem, 4vw, 2rem);
-    padding: 0 1rem;
-  }
-
-  .projecte {
-    margin: 8px;
-    padding: 10px;
-  }
-
-  .social-icons a {
-    width: 35px;
-    height: 35px;
-    margin: 8px;
-  }
-
-  .social-icons i {
-    font-size: 1.2rem;
-  }
-
-  .columna {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-
-  .badges-contenedor {
-    gap: 6px;
-  }
-
-  .badge {
-    font-size: 0.75rem;
-    padding: 0.4em 0.8em;
-  }
-
-  .overlay p {
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  }
-}
 
 /*seccio principal*/
 .hero {
@@ -134,15 +59,17 @@ h1 {
   width: 220px;
   height: 220px;
   margin: 20px;
-  border: 4px solid #68a063;
-  box-shadow: 0 0 30px rgba(104, 160, 99, 0.3), 0 0 60px rgba(55, 95, 52, 0.2);
+  transition: width 1s ease-in-out;
+  background: linear-gradient(90deg, #68a063 0%, #28a745 100%);
+  border: 4px solid #28a745;
+  box-shadow: 0 0 30px linear-gradient(90deg, rgb(105, 160, 100) 0%, rgb(40, 167, 69) 100%);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   filter: grayscale(50%);
 }
 
 .hero-imatge-developer:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(104, 160, 99, 0.5), 0 0 80px rgba(55, 95, 52, 0.3);
+  box-shadow: 0 0 40px rgba(105, 160, 100), 0 0 80px rgba(40, 167, 69);
 }
 
 .hero h2 {
@@ -172,6 +99,10 @@ h1 {
   transform: translateY(-5px);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
 }
+.white-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
 
 
 .about-me {
@@ -179,6 +110,16 @@ h1 {
   min-height: fit-content;
   width: 100%;
   overflow: hidden;
+}
+.about-me h2 {
+  font-size: clamp(19px, 2.5vw, 30px);
+  margin: 10px 0;
+}
+.about-me .section-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: Sigmar;
 }
 
 .about-me div {
@@ -199,24 +140,75 @@ h1 {
 
 /* media queries per a dispositius mòbils */
 @media screen and (max-width: 768px) {
-
   /*distribució del menu en dispositius mòbils*/
   .navbar-brand {
     display: none;
   }
 
-  /*Secció sobre mi*/
-  .about-me {
-    height: 200px;
+  .hero {
+    padding: 1rem;
+    min-height: 80vh;
   }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero h2 {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+
+  .hero-imatge-developer {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+  }
+
+  .hero-inferior img {
+    width: 50%;
+    max-width: 200px;
+  }
+
+.section-title{
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
+  .section-text {
+    font-size: clamp(2rem, 4vw, 2rem);
+    padding: 0 1rem;
+  }
 
-/* media queries per a dispositius mòbils */
-@media screen and (max-width: 768px) {
+  .projecte {
+    margin: 8px;
+    padding: 10px;
+  }
 
-  /*distribució del menu en dispositius mòbils*/
-  .navbar-brand {
-    display: none;
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    margin: 8px;
+  }
+
+  .social-icons i {
+    font-size: 1.2rem;
+  }
+
+  .columna {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .badges-contenedor {
+    gap: 6px;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.8em;
+  }
+
+  .overlay p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   }
 
   /*Secció sobre mi*/
@@ -224,7 +216,6 @@ h1 {
     padding: 15px;
     min-height: fit-content;
   }
-
 
   /*tamany del botó */
   .btn-responive {
@@ -261,23 +252,21 @@ h1 {
 .experience {
   padding: 20px;
 }
-
-@media (min-width: 768px) {
-  .experience {
-    padding: 40px 40px 60px 40px;
-  }
-}
-
 .columna {
   margin-bottom: 20px;
   padding: 15px;
 }
-
 @media (min-width: 768px) {
+  .experience {
+    padding: 40px 40px 60px 40px;
+  }
   .columna {
     padding: 20px;
   }
 }
+
+
+
 
 
 .badges-contenedor {
@@ -309,11 +298,14 @@ h1 {
   padding: 20px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
-
+.skills-container:hover{
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(104, 160, 99, 0.15);
+}
 .skill-item {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .skill-item:last-child {
@@ -321,7 +313,7 @@ h1 {
 }
 
 .progress {
-  height: 25px;
+  height: 10px;
   background-color: rgba(2, 2, 2, 0.1);
   border-radius: 15px;
   overflow: hidden;
@@ -358,7 +350,6 @@ h1 {
 .skill-item span {
   color: #e0e0e0;
   font-size: 1rem;
-  margin-bottom: 5px;
 }
 
 
@@ -506,7 +497,15 @@ h1 {
   background: #555;
 }
 
-
+#projectes-video {
+  max-width: 100%;
+  height: auto;
+  transition: width 1s ease-in-out;
+  background: linear-gradient(90deg, #68a063 0%, #28a745 100%);
+  box-shadow: 0 0 15px rgba(104, 160, 99, 0.4);
+  border-radius: 15px;
+  color: #fff;
+}
 .overlay {
   transition: all 0.3s ease;
   opacity: 0;
@@ -716,7 +715,7 @@ footer {
   border-radius: 15px;
   color: #fff;
 }
-.btn-success:hover {
+#btn-success1:hover {
   transform: scale(1.2);
   box-shadow: 0 4px 12px rgba(104, 160, 99, 0.15);
 

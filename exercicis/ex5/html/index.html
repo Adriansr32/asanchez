@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Joc del Talp</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h1>Whac-A-Mole</h1>
+    <h3 id="timeP">Time: <span id="time">30</span></h3>
+    <p>Score: <span id="puntuacio">0</span></p><br><br>
+
+    <h3 id="talpTimes">El tap ha aparegut: <span id="talpTimesP">0</span> vegades</h3>
+
+    <div id="joc">        
+        <div class="forat"><img id="0" onclick="a(this)" src="../img/topoNo.png" alt="Talp"></div>
+        <div class="forat"><img id="1" onclick="a(this)" src="../img/topoNo.png" alt="Talp"></div>
+        <div class="forat"><img id="2" onclick="a(this)" src="../img/topoNo.png" alt="Talp"></div>
+        <div class="forat"><img id="3" onclick="a(this)" src="../img/topoNo.png" alt="Talp"></div>
+        <div class="forat"><img id="4" onclick="a(this)" src="../img/topoNo.png" alt="Talp"></div>
+        <div class="forat"><img id="5" onclick="a(this)" src="../img/topoNo.png" alt="Talp"></div>
+        <div class="forat"><img id="6" onclick="a(this)" src="../img/topoNo.png" alt="Talp"></div>
+        <div class="forat"><img id="7" onclick="a(this)" src="../img/topoNo.png" alt="Talp"></div>
+        <div class="forat"><img id="8" onclick="a(this)" src="../img/topoNo.png" alt="Talp"></div>
+      
+        <div id="cop"></div>
+        
+        <audio id="soCop" src="../sounds/boing.mp3"></audio>
+      </div>
+  <script src="../js/script.js"></script>
+</body>
+</html>
