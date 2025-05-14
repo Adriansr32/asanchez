@@ -20,14 +20,14 @@ let soCop = document.getElementById("soCop");
 function mostrarTalp() {
     posicioTalp = Math.floor(Math.random() * 9);
     if (posicioTalp === 0) forat1.src = "../img/topoSi.png";
-    if (posicioTalp === 1) forat2.src = "../img/topoNo.png";
-    if (posicioTalp === 2) forat3.src = "../img/topoNo.png";
-    if (posicioTalp === 3) forat4.src = "../img/topoNo.png";
-    if (posicioTalp === 4) forat5.src = "../img/topoNo.png";
-    if (posicioTalp === 5) forat6.src = "../img/topoNo.png";
-    if (posicioTalp === 6) forat7.src = "../img/topoNo.png";
-    if (posicioTalp === 7) forat8.src = "../img/topoNo.png";
-    if (posicioTalp === 8) forat9.src = "../img/topoNo.png";
+    if (posicioTalp === 1) forat2.src = "../img/topoSi.png";
+    if (posicioTalp === 2) forat3.src = "../img/topoSi.png";
+    if (posicioTalp === 3) forat4.src = "../img/topoSi.png";
+    if (posicioTalp === 4) forat5.src = "../img/topoSi.png";
+    if (posicioTalp === 5) forat6.src = "../img/topoSi.png";
+    if (posicioTalp === 6) forat7.src = "../img/topoSi.png";
+    if (posicioTalp === 7) forat8.src = "../img/topoSi.png";
+    if (posicioTalp === 8) forat9.src = "../img/topoSi.png";
 }   
 
 function amagarTalp() {
@@ -46,7 +46,7 @@ const intervalTalp  = setInterval(() => {
     amagarTalp();
     mostrarTalp();
     timesTalp++;
-}, 1000);
+}, 500);
 
 const intervalTimer = setInterval(myTimer, 1000);
  
